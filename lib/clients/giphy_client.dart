@@ -25,4 +25,11 @@ class GiphyClient extends Cosmic.Client {
     @Query('rating') String rating,
     @Query('lang') String lang = "en",
   });
+
+  @Get('/trending')
+  Future<List<Gif>> trending({
+    @Query('api_key') String apiKey,
+    @Query('limit') int limit,
+    @Query('rating') String rating,
+  });
 }

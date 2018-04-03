@@ -38,6 +38,20 @@ class GiphyClient extends Client {
         path);
   }
 
+  Future<List<Gif>> trending(api_key, limit, rating) {
+    final Type returnType = const TypeProvider<List<Gif>>().type;
+    final String path = "/trending";
+
+    return _callMiddleware(
+        new Request(
+          "$url/trending?api_key=$api_key&limit=$limit&rating=$rating",
+          http.get,
+          ANTN.Get,
+        ),
+        returnType,
+        path);
+  }
+
   Future<dynamic> _request(Future<http.Response> req, Type returnType) {
     var completer = new Completer();
 
