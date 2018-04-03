@@ -3,6 +3,15 @@ import 'package:rifroof/secret_loader.dart';
 
 void main() async {
   final secret = await loadSecret();
+  
+  // GiphyClient giphyClient = new GiphyClient();
+  
+  // final Gif gif = await giphyClient.random(secret.giphy, "", GifRating.G);
+  // print(gif.title);
+
+  // final List<Gif> gifs = await giphyClient.search(secret.giphy, "cruse", 25, 0, GifRating.R, "en");
+  // gifs.forEach((gif) => print(gif.title));
+  
 
   runApp(new MyApp());
 }
