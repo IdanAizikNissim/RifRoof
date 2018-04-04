@@ -16,10 +16,7 @@ dev_dependencies:
     sdk: flutter
   json_serializable: "^0.4.0"
   build_runner: ^0.7.6
-  cosmic:
-    git:
-      url: git@gitlab.com:idan-aizik-nissim/dart-cosmic.git
-      ref: 0.0.4.1
+  cosmic: ^0.0.5
 
 
 # For information on the generic Dart part of this file, see the

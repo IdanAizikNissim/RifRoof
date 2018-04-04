@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rifroof/models/gif.dart';
 
+const _k404Gif = "https://media.giphy.com/media/BEYRc8P1IaiaY/giphy.gif";
+
 class GifView extends StatefulWidget {
   final Gif gif;
   final Resolution resolution;
@@ -24,24 +26,24 @@ class GifViewState extends State<GifView> {
   }
 
   Widget _gifImage() {
-    String url;
+    GifImage image;
 
     switch (widget.resolution) {
       case Resolution.Preview:
-        url = widget.gif.images.preview.url;
+        image = widget.gif.images.preview;
         break;
       case Resolution.Downsized:
-        url = widget.gif.images.downsized.url;
+        image = widget.gif.images.downsized;
         break;
       case Resolution.Medium:
-        url = widget.gif.images.medium.url;
+        image = widget.gif.images.medium;
         break;
       case Resolution.Large:
-        url = widget.gif.images.large.url;
+        image = widget.gif.images.large;
         break;
     }
 
-    return new Image.network(url, fit: BoxFit.fill);
+    return new Image.network(image != null ? image.url : _k404Gif, fit: BoxFit.fill);
   }
 
   @override

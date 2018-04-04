@@ -10,3 +10,4 @@ ios/.generated/
 packages
 .flutter-plugins
 assets/secret.json
+.dart_tool

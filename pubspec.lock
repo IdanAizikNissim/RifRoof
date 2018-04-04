@@ -116,12 +116,10 @@ packages:
   cosmic:
     dependency: "direct dev"
     description:
-      path: "."
-      ref: "0.0.4.1"
-      resolved-ref: b6ffe1798cc5600f5a4358a3203d44f0dbe311c3
-      url: "git@gitlab.com:idan-aizik-nissim/dart-cosmic.git"
-    source: git
-    version: "0.0.4"
+      name: cosmic
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.0.5"
   crypto:
     dependency: transitive
     description:
