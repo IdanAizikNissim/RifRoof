@@ -1,14 +1,17 @@
 import 'dart:async';
+import 'package:http/http.dart' as http;
 import 'package:cosmic/annotations/cosmic_annotations.dart';
 import 'package:cosmic/cosmic_lib.dart' as Cosmic;
 import 'package:rifroof/clients/converters/giphy_converter.dart';
 import 'package:rifroof/models/gif.dart';
 
+part 'giphy_client.g.dart';
+
 @Client(
   path: "https://api.giphy.com/v1/gifs",
   converter: const GiphyConverter(),
 )
-class GiphyClient extends Cosmic.Client {
+class GiphyClient extends Cosmic.Client with _$GiphyClient {
   @Get('/random')
   Future<Gif> random({
     @Query('api_key') String apiKey,

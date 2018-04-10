@@ -16,7 +16,7 @@ dev_dependencies:
     sdk: flutter
   json_serializable: "^0.4.0"
   build_runner: ^0.7.6
-  cosmic: ^0.0.5
+  cosmic: "^1.1.1"
 
 
 # For information on the generic Dart part of this file, see the
