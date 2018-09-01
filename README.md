@@ -1,8 +1,16 @@
 # rifroof
 
-A new Flutter project.
+Flutter Gif App with cosmic and json_annotation
 
 ## Getting Started
 
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+Before run please create `secret.json` file in `assets` folder with:  
+giphy api key   
+jsonbin api key (can be empty for now)
+
+```javascript
+{
+    "giphy": "",
+    "jsonbin": ""
+}
+```
